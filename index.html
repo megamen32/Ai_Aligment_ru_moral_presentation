@@ -8,151 +8,126 @@
 <style>
  html,body{margin:0;padding:0;font-family:'Montserrat',Arial,sans-serif}
  .slide{height:100vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;box-sizing:border-box;position:relative}
- .title{font-size:4em;font-weight:700;margin:0.5em 0}
- .subtitle{font-size:1.6em;margin:0.5em 0}
-  .footer{margin-top:40px;width:100%;text-align:center;font-size:1em}
- .logos{display:flex;gap:20px;margin-top:40px}
- .logo{width:90px;height:45px;background:rgba(255,255,255,0.2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.9em;border-radius:5px}
+ .title{font-size:3.2em;font-weight:700;margin:0.5em 0}
+ .subtitle{font-size:1.4em;margin:0.5em 0}
+ .footer{margin-top:40px;width:100%;text-align:center;font-size:1em}
+.logos{display:flex;gap:20px;margin-top:40px}
+.logos img{height:45px}
  .nav{position:absolute;bottom:20px;right:20px;font-size:2.5em;color:#fff;text-decoration:none}
- /* Slide specific colors */
-  .slide1{background:linear-gradient(135deg,#081c4b,#4b8cc3);color:#fff}
-  .slide2{background:#fdfdfd;color:#111}
-  .slide3{background:linear-gradient(135deg,#e9e9e9,#cccccc);color:#111}
-  .slide4{background:linear-gradient(135deg,#f0e6ff,#c2b0e2);color:#111}
-  .slide5{background:linear-gradient(135deg,#e0f7fa,#a7d0d9);color:#111}
-  .slide6{background:linear-gradient(135deg,#fff7e0,#ecd09b);color:#111}
-  .slide7{background:linear-gradient(135deg,#e9f0e6,#b9d0b5);color:#111}
-  .slide8{background:linear-gradient(135deg,#ffe8e8,#f3bcbc);color:#111}
-  .slide9{background:linear-gradient(135deg,#e0e0e0,#bdbdbd);color:#111}
-  .slide10{background:linear-gradient(135deg,#e6f0ff,#b3c8f0);color:#111}
-  .slide11{background:linear-gradient(135deg,#f5e6ff,#d1b3e6);color:#111}
-  .slide12{background:linear-gradient(135deg,#081c4b,#4b8cc3);color:#fff}
- /* Graph bars */
- .graph{display:flex;gap:40px;margin-top:20px}
- .bar{position:relative;width:60px;height:150px;background:#ddd;border-radius:5px;overflow:hidden}
- .bar span{position:absolute;bottom:0;left:0;width:100%;background:#4b8cc3}
- .bar[data-perc="77"] span{height:77%}
- .bar[data-perc="85"] span{height:85%;background:#6c2c90}
- .bar::before{content:attr(data-perc) '%';position:absolute;top:-25px;left:50%;transform:translateX(-50%);font-weight:700}
+ /* Slide colors */
+ .slide1{background:linear-gradient(135deg,#081c4b,#4b8cc3);color:#fff}
+ .slide2{background:#fdfdfd;color:#111}
+ .slide3{background:linear-gradient(135deg,#e9e9e9,#cccccc);color:#111}
+ .slide4{background:linear-gradient(135deg,#f0e6ff,#c2b0e2);color:#111}
+ .slide5{background:linear-gradient(135deg,#e0f7fa,#a7d0d9);color:#111}
+ .slide6{background:linear-gradient(135deg,#fff7e0,#ecd09b);color:#111}
+ /* Simple graph styles */
+ .graph{display:flex;gap:60px;margin-top:30px}
+ .pie{width:130px;height:130px;border-radius:50%;display:flex;justify-content:center;align-items:center;background:conic-gradient(#4b8cc3 calc(var(--p)*1%),#ddd 0);font-size:1.6em;font-weight:700}
+ 
+ .graph .label{margin-top:10px;font-size:0.9em}
+ .split{display:flex;justify-content:space-between;width:100%;max-width:900px}
+ .column{width:48%}
+ .cards{display:flex;gap:20px;justify-content:center}
+ .card{flex:1;background:rgba(255,255,255,0.2);padding:20px;border-radius:10px}
+ .team{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px}
+ .team span{font-size:3em}
 </style>
 </head>
 <body>
+<!-- Слайд 1 -->
 <section id="slide1" class="slide slide1">
- <h1 class="title"><span style="font-size:1.3em">РУССКИЙ КОД</span><br>АЛГОРИТМ ДУШИ</h1>
- <div class="logos">
-  <div class="logo">ПФКИ</div>
-  <div class="logo">Китеж</div>
-  <div class="logo">Мечта</div>
- </div>
+  <h1 class="title"><span style="font-size:1.3em">РУССКИЙ КОД:</span><br>АЛГОРИТМ ДУШИ</h1>
+  <div class="logos">
+    <img src="images/pfki.jpeg" alt="ПФКИ">
+    <img src="images/kitez.png" alt="Общество Китеж">
+    <img src="images/rusmechta.png" alt="Русская Мечта">
+  </div>
   <p class="footer">Розанов Никита Олегович, Общество Китеж (организация-заявитель)</p>
- <a href="#slide2" class="nav">&#8595;</a>
+  <a href="#slide2" class="nav">&#8595;</a>
 </section>
+<!-- Слайд 2 -->
 <section id="slide2" class="slide slide2">
- <h2 class="title">Проблема</h2>
- <p class="subtitle" style="max-width:600px;font-style:italic">Технологии меняют мир, но нравственность ИИ остаётся неясной</p>
- <div class="graph">
-  <div class="bar" data-perc="77"><span></span></div>
-  <div class="bar" data-perc="85"><span></span></div>
- </div>
-  <p class="footer">77% россиян за участие человека в этике ИИ (ВЦИОМ)<br>85% за единые этические стандарты</p>
- <a href="#slide3" class="nav" style="color:#000">&#8595;</a>
+  <h2 class="title">Проблема</h2>
+  <p class="subtitle" style="max-width:700px;font-style:italic">Технологии меняют мир, но нравственность ИИ остаётся неясной</p>
+  <div class="graph">
+    <div>
+      <div class="pie" style="--p:77">77%</div>
+      <div class="label">👤⚙️ 77% — участие человека</div>
+    </div>
+    <div>
+      <div class="pie" style="--p:85">85%</div>
+      <div class="label">📜 85% — единые стандарты</div>
+    </div>
+  </div>
+  <p class="footer">Источник: ВЦИОМ, 2025</p>
+  <a href="#slide3" class="nav" style="color:#000">&#8595;</a>
 </section>
+<!-- Слайд 3 -->
 <section id="slide3" class="slide slide3">
- <h2 class="title">Цель</h2>
- <p class="subtitle" style="max-width:600px">Осмыслить и очертить ценностную матрицу отечественного ИИ<br>на основе традиционных духовно-нравственных ценностей</p>
- <p style="font-weight:700">Через диалог культуры, философии, религии и технологий</p>
- <a href="#slide4" class="nav" style="color:#000">&#8595;</a>
+  <div class="split">
+    <div class="column">
+      <h3>Цель проекта</h3>
+      <p>🎯 Очертить ценностную матрицу<br> на основе традиционных ценностей</p>
+    </div>
+    <div class="column">
+      <h3>Творческая концепция</h3>
+      <p>🎙️ 8 дискуссий<br>🌀 Перформативность<br>📚 Философские комментарии</p>
+    </div>
+    <div class="column">
+      <h3>Формат реализации</h3>
+      <p>▶️ Видеокурс и интервью<br>🎥 Съёмка, монтаж<br>📊 Социальная аналитика</p>
+    </div>
+  </div>
+  <a href="#slide4" class="nav" style="color:#000">&#8595;</a>
 </section>
-
+<!-- Слайд 4 -->
 <section id="slide4" class="slide slide4">
- <h2 class="title">Концепция</h2>
- <img src="https://picsum.photos/seed/concept/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li>8 открытых дискуссий</li>
-  <li>Перформативность</li>
-  <li>Философия</li>
-  <li>Междисциплинарность</li>
-  <li>Видеокурс</li>
-  <li>Интервью</li>
-  <li>Философские комментарии</li>
- </ul>
- <a href="#slide5" class="nav">&#8595;</a>
+  <div class="split" style="flex-direction:column;align-items:center">
+    <div class="column" style="width:100%">
+      <h3>Для кого</h3>
+      <div class="cards">
+        <div class="card">👨‍💻 Разработчики ИИ<br>Получат ориентиры</div>
+        <div class="card">🎓 Студенты IT<br>Идейный трамплин</div>
+        <div class="card">🤔 Философы<br>Междисциплинарный анализ</div>
+      </div>
+    </div>
+    <div class="column" style="width:100%">
+      <h3 style="margin-top:40px">Команда / Эксперты</h3>
+      <div class="team">
+        <span>🧑‍💼</span>
+        <span>📚</span>
+        <span>💻</span>
+        <span>✝️</span>
+      </div>
+    </div>
+  </div>
+  <a href="#slide5" class="nav" style="color:#000">&#8595;</a>
 </section>
-
+<!-- Слайд 5 -->
 <section id="slide5" class="slide slide5">
- <h2 class="title">Для кого проект</h2>
- <img src="https://picsum.photos/seed/audience/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li>Разработчики ИИ — получат ориентиры</li>
-  <li>Студенты ИТ — идейный трамплин</li>
-  <li>Философы — междисциплинарный анализ</li>
- </ul>
- <a href="#slide6" class="nav">&#8595;</a>
+  <div class="split">
+    <div class="column">
+      <h3>Результаты</h3>
+      <p>1. 8 🎙️ дискуссий<br>2. 1 🎬 видеокурс<br>3. 1 📊 ценностная матрица<br>4. ↑ 📈 рост этической грамотности</p>
+    </div>
+    <div class="column">
+      <h3>Значимость</h3>
+      <ul style="text-align:left;font-size:1.2em;list-style:none;padding:0">
+        <li>🧠 Укрепление гуманитарной составляющей технологий</li>
+        <li>🧭 Осмысление идентичности в цифровую эпоху</li>
+        <li>🌱 Вклад в устойчивое цифровое будущее</li>
+      </ul>
+    </div>
+  </div>
+  <a href="#slide6" class="nav" style="color:#000">&#8595;</a>
 </section>
-
+<!-- Слайд 6 -->
 <section id="slide6" class="slide slide6">
- <h2 class="title">Как реализуем</h2>
- <img src="https://picsum.photos/seed/format/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li>Дискуссии в РГГУ</li>
-  <li>Медиапроизводство (съёмка, монтаж, курс)</li>
-  <li>Социальная аналитика (опросы, измерения)</li>
- </ul>
- <a href="#slide7" class="nav">&#8595;</a>
+  <h3 class="title">Ценностная матрица</h3>
+  <div style="max-width:70%;height:300px;border:2px dashed #999;display:flex;justify-content:center;align-items:center;border-radius:10px">Диаграмма ценностной матрицы</div>
+  <p class="subtitle">Розанов Никита Олегович<br>careviolan@gmail.com</p>
+  <p class="footer" style="font-size:1.4em;font-weight:700">Спасибо за внимание!<br><span style="font-size:0.8em">Создаём цифровое будущее с человеческим лицом</span></p>
 </section>
-
-<section id="slide7" class="slide slide7">
- <h2 class="title">Ценностная матрица</h2>
- <img src="https://picsum.photos/seed/matrix/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li><b>Что это:</b> инструмент, соединяющий традиционные ценности с задачами ИИ</li>
-  <li><b>Как создаётся:</b> на основе дискуссий, интерпретаций, диалогов</li>
- </ul>
- <a href="#slide8" class="nav">&#8595;</a>
-</section>
-
-<section id="slide8" class="slide slide8">
- <h2 class="title">Результаты</h2>
- <img src="https://picsum.photos/seed/results/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li>8 дискуссий</li>
-  <li>1 видеокурс</li>
-  <li>Ценностная матрица</li>
-  <li>Рост этической грамотности</li>
- </ul>
- <a href="#slide9" class="nav">&#8595;</a>
-</section>
-
-<section id="slide9" class="slide slide9">
- <h2 class="title">Значимость</h2>
- <img src="https://picsum.photos/seed/impact/600/300" alt="" style="max-width:80%;border-radius:10px">
- <ul style="text-align:left;display:inline-block;margin-top:20px;font-size:1.2em">
-  <li>Укрепление гуманитарной составляющей технологий</li>
-  <li>Осмысление идентичности в цифровую эпоху</li>
-  <li>Вклад в устойчивое цифровое будущее</li>
- </ul>
- <a href="#slide10" class="nav">&#8595;</a>
-</section>
-
-<section id="slide10" class="slide slide10">
- <h2 class="title">Команда</h2>
- <img src="https://picsum.photos/seed/team/600/300" alt="" style="max-width:80%;border-radius:10px">
- <p class="subtitle">Модераторы, философы, религиозные деятели, ИТ-специалисты</p>
- <a href="#slide11" class="nav">&#8595;</a>
-</section>
-
-<section id="slide11" class="slide slide11">
- <h2 class="title">Партнёры и цитаты</h2>
- <img src="https://picsum.photos/seed/partners/600/300" alt="" style="max-width:80%;border-radius:10px">
- <p class="subtitle" style="max-width:600px;font-style:italic">"Создаём цифровое будущее с человеческим лицом"</p>
- <a href="#slide12" class="nav">&#8595;</a>
-</section>
-
-<section id="slide12" class="slide slide12">
- <h2 class="title">Контакты</h2>
- <p class="subtitle">Никита Розанов<br>careviolan@gmail.com<br>Общество Китеж</p>
- <p class="footer" style="font-size:1.4em;font-weight:700">Спасибо за внимание</p>
-</section>
-
 </body>
 </html>
