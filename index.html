@@ -6,14 +6,16 @@
 <title>Русский код: Алгоритм души</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
- html,body{margin:0;padding:0;font-family:'Montserrat',Arial,sans-serif}
- .slide{height:100vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;box-sizing:border-box;position:relative}
+ html,body{margin:0;padding:0;font-family:'Montserrat',Arial,sans-serif;scroll-behavior:smooth}
+ .slide{height:100vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;box-sizing:border-box;position:relative;opacity:0;transform:translateY(40px);transition:all 0.8s ease}
+ .slide.visible{opacity:1;transform:none}
  .title{font-size:3.2em;font-weight:700;margin:0.5em 0}
  .subtitle{font-size:1.4em;margin:0.5em 0}
  .footer{margin-top:40px;width:100%;text-align:center;font-size:1em}
 .logos{display:flex;gap:20px;margin-top:40px}
 .logos img{height:45px}
- .nav{position:absolute;bottom:20px;right:20px;font-size:2.5em;color:#fff;text-decoration:none}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+ .nav{position:absolute;bottom:20px;right:20px;font-size:2.5em;color:#fff;text-decoration:none;animation:bounce 2s infinite}
  /* Slide colors */
  .slide1{background:linear-gradient(135deg,#081c4b,#4b8cc3);color:#fff}
  .slide2{background:#fdfdfd;color:#111}
@@ -29,9 +31,10 @@
  .split{display:flex;justify-content:space-between;width:100%;max-width:900px}
  .column{width:48%}
  .cards{display:flex;gap:20px;justify-content:center}
- .card{flex:1;background:rgba(255,255,255,0.2);padding:20px;border-radius:10px}
+ .card{flex:1;background:rgba(255,255,255,0.25);padding:20px;border-radius:10px;backdrop-filter:blur(5px)}
  .team{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px}
  .team span{font-size:3em}
+ .team img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 4px 15px rgba(0,0,0,0.3)}
 </style>
 </head>
 <body>
@@ -95,10 +98,9 @@
     <div class="column" style="width:100%">
       <h3 style="margin-top:40px">Команда / Эксперты</h3>
       <div class="team">
-        <span>🧑‍💼</span>
-        <span>📚</span>
-        <span>💻</span>
-        <span>✝️</span>
+        <img src="images/asmanov.webp" alt="Аслан Асманов">
+        <img src="images/марков.jpeg" alt="Марк Марков">
+        <img src="images/дугин.jpeg" alt="Александр Дугин">
       </div>
     </div>
   </div>
@@ -131,5 +133,12 @@
   <p class="subtitle">Розанов Никита Олегович<br>careviolan@gmail.com</p>
   <p class="footer" style="font-size:1.4em;font-weight:700">Спасибо за внимание!<br><span style="font-size:0.8em">Создаём цифровое будущее с человеческим лицом</span></p>
 </section>
+<script>
+const slides=document.querySelectorAll('.slide');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:0.3});
+slides.forEach(s=>observer.observe(s));
+</script>
 </body>
 </html>
