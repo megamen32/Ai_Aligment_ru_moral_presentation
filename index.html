@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Русский код: Алгоритм души</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+ html,body{margin:0;padding:0;font-family:'Montserrat',Arial,sans-serif}
+ .slide{height:100vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;box-sizing:border-box;position:relative}
+ .title{font-size:3em;font-weight:700;margin:0.5em 0}
+ .subtitle{font-size:1.2em;margin:0.5em 0}
+ .footer{position:absolute;bottom:20px;width:100%;text-align:center;font-size:0.8em}
+ .logos{display:flex;gap:20px;margin-top:auto}
+ .logo{width:80px;height:40px;background:rgba(255,255,255,0.2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.8em;border-radius:5px}
+ .nav{position:absolute;bottom:20px;right:20px;font-size:2em;color:#fff;text-decoration:none}
+ /* Slide specific colors */
+ .slide1{background:linear-gradient(135deg,#081c4b,#4b8cc3);color:#fff}
+ .slide2{background:#fdfdfd;color:#111}
+ .slide3{background:linear-gradient(135deg,#e9e9e9,#cccccc);color:#111}
+ /* Graph bars */
+ .graph{display:flex;gap:40px;margin-top:20px}
+ .bar{position:relative;width:60px;height:150px;background:#ddd;border-radius:5px;overflow:hidden}
+ .bar span{position:absolute;bottom:0;left:0;width:100%;background:#4b8cc3}
+ .bar[data-perc="77"] span{height:77%}
+ .bar[data-perc="85"] span{height:85%;background:#6c2c90}
+ .bar::before{content:attr(data-perc) '%';position:absolute;top:-25px;left:50%;transform:translateX(-50%);font-weight:700}
+</style>
+</head>
+<body>
+<section id="slide1" class="slide slide1">
+ <h1 class="title"><span style="font-size:1.2em">РУССКИЙ КОД</span><br>АЛГОРИТМ ДУШИ</h1>
+ <div class="logos">
+  <div class="logo">ПФКИ</div>
+  <div class="logo">Китеж</div>
+  <div class="logo">Мечта</div>
+ </div>
+ <div class="footer">Розанов Никита Олегович, Общество Китеж (организация-заявитель)</div>
+ <a href="#slide2" class="nav">&#8595;</a>
+</section>
+<section id="slide2" class="slide slide2">
+ <h2 class="title">Проблема</h2>
+ <p class="subtitle" style="max-width:600px;font-style:italic">Технологии меняют мир, но нравственность ИИ остаётся неясной</p>
+ <div class="graph">
+  <div class="bar" data-perc="77"><span></span></div>
+  <div class="bar" data-perc="85"><span></span></div>
+ </div>
+ <div class="footer">77% россиян за участие человека в этике ИИ (ВЦИОМ)<br>85% за единые этические стандарты</div>
+ <a href="#slide3" class="nav" style="color:#000">&#8595;</a>
+</section>
+<section id="slide3" class="slide slide3">
+ <h2 class="title">Цель</h2>
+ <p class="subtitle" style="max-width:600px">Осмыслить и очертить ценностную матрицу отечественного ИИ<br>на основе традиционных духовно-нравственных ценностей</p>
+ <p style="font-weight:700">Через диалог культуры, философии, религии и технологий</p>
+ <div class="footer"><a href="#slide1" class="nav" style="color:#000">&#8593;</a></div>
+</section>
+</body>
+</html>
