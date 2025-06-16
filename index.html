@@ -36,6 +36,11 @@
  .team span{font-size:3em}
  .team img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 4px 15px rgba(0,0,0,0.3)}
  .slide6 img{max-width:80%;max-height:60vh;height:auto;object-fit:contain;display:block;margin:20px auto}
+.project-table{width:100%;max-width:900px;border-collapse:collapse;background:rgba(255,255,255,0.6);box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+.project-table th,.project-table td{border:1px solid rgba(0,0,0,0.1);padding:15px;}
+.project-table th{background:rgba(0,0,0,0.05);font-size:1.2em;}
+.project-table td{font-size:1.1em;text-align:center;}
+
 </style>
 </head>
 <body>
@@ -69,20 +74,22 @@
 </section>
 <!-- Слайд 3 -->
 <section id="slide3" class="slide slide3">
-  <div class="split">
-    <div class="column">
-      <h3>Цель проекта</h3>
-      <p>🎯 Очертить ценностную матрицу<br> на основе традиционных ценностей</p>
-    </div>
-    <div class="column">
-      <h3>Творческая концепция</h3>
-      <p>🎙️ 8 дискуссий<br>🌀 Перформативность<br>📚 Философские комментарии</p>
-    </div>
-    <div class="column">
-      <h3>Формат реализации</h3>
-      <p>▶️ Видеокурс и интервью<br>🎥 Съёмка, монтаж<br>📊 Социальная аналитика</p>
-    </div>
-  </div>
+  <table class="project-table">
+    <thead>
+      <tr>
+        <th>Цель проекта</th>
+        <th>Творческая концепция</th>
+        <th>Формат реализации</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🎯 Очертить ценностную матрицу<br>на основе традиционных ценностей</td>
+        <td>🎙️ 8 дискуссий<br>🌀 Перформативность<br>📚 Философские комментарии</td>
+        <td>▶️ Видеокурс и интервью<br>🎥 Съёмка, монтаж<br>📊 Социальная аналитика</td>
+      </tr>
+    </tbody>
+  </table>
   <a href="#slide4" class="nav" style="color:#000">&#8595;</a>
 </section>
 <!-- Слайд 4 -->
