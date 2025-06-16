@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="932c34b4-550a-42fb-bfc9-d01b920cc26b" name="Changes" comment="addedd images and uptaded tz">
-      <change afterPath="$PROJECT_DIR$/images/value_matrix.png" afterDir="false" />
+    <list default="true" id="932c34b4-550a-42fb-bfc9-d01b920cc26b" name="Changes" comment="addedd images">
+      <change afterPath="$PROJECT_DIR$/images/матрица.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -13,6 +13,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -140,7 +145,47 @@
       <option name="project" value="LOCAL" />
       <updated>1750068136912</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="addedd images">
+      <option name="closed" value="true" />
+      <created>1750071677356</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750071677356</updated>
+    </task>
+    <task id="LOCAL-00006" summary="addedd images">
+      <option name="closed" value="true" />
+      <created>1750071744889</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750071744889</updated>
+    </task>
+    <task id="LOCAL-00007" summary="addedd images">
+      <option name="closed" value="true" />
+      <created>1750071769905</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750071769905</updated>
+    </task>
+    <task id="LOCAL-00008" summary="addedd images">
+      <option name="closed" value="true" />
+      <created>1750071774928</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750071774928</updated>
+    </task>
+    <task id="LOCAL-00009" summary="addedd images">
+      <option name="closed" value="true" />
+      <created>1750071778059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750071778059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +203,7 @@
     <MESSAGE value="i" />
     <MESSAGE value="react" />
     <MESSAGE value="addedd images and uptaded tz" />
-    <option name="LAST_COMMIT_MESSAGE" value="addedd images and uptaded tz" />
+    <MESSAGE value="addedd images" />
+    <option name="LAST_COMMIT_MESSAGE" value="addedd images" />
   </component>
 </project>
